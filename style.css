@@ -85,6 +85,11 @@ body, body *, body * ::before, body * ::after {
 .box3 {
     position: relative;
 }
+.time {
+    text-align: end;
+    font-size: 1.2rem;
+    color: rgb(174, 196, 197);
+}
 .article {
     width: 85rem;
     margin: 2rem auto;
