@@ -111,22 +111,25 @@ body, body *, body * ::before, body * ::after {
     margin: 2rem 0;
     line-height: 4rem;
 }
+
 .cite {
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .cite figure {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #DDDDDD;
     border-radius: 0.5rem;
     padding: 1rem;
+    vertical-align: middle;
 }
 .cite img {
-    display: inline-block;
     height: 15rem;
+    margin-right: 1rem;
 }
 .cite figcaption {
-    display: inline-block;
-    vertical-align: text-bottom;
     font-size: 1.5rem;
     color: #808080;
 }
@@ -140,7 +143,7 @@ body, body *, body * ::before, body * ::after {
 
 .share {
     position: absolute;
-    bottom: 4rem;
+    bottom: -3rem;
     left: 3rem;
     height: 6rem;
     width: 6rem;
@@ -169,7 +172,7 @@ body, body *, body * ::before, body * ::after {
 .share-hidden {
     display: none;
     position: absolute;
-    bottom: 4rem;
+    bottom: -3rem;
     left: 3rem;
     background-color: rgb(255, 254, 244);
     border-radius: 1rem;
@@ -269,5 +272,44 @@ body, body *, body * ::before, body * ::after {
     }
 }
 
+/* under 800px */
+@media (max-width: 800px) {
+    .article {
+        width: 68rem;
+    }
+}
+
 /* under 500px */
-@media (max-width: 500px) {}
+@media (max-width: 700px) {
+    html {
+        font-size: 50%; /* ->8px */
+    }
+
+    .menu {
+        padding-left: 1rem;
+    }
+    .menu li {
+        padding: 0.2rem 0.4rem;
+    }
+
+    .access {
+        padding-right: 1rem;
+    }
+    .access p {
+        margin: 0.2rem 0;
+        padding: 0 0.4rem;
+    }
+
+    .article {
+        width: calc(100%*68/70);
+        padding: 2rem;
+    }
+
+    .share .share-hidden {
+        left: 2rem;
+    }
+
+    .top {
+        right: 2rem;
+    }
+}
