@@ -52,6 +52,9 @@ body, body *, body * ::before, body * ::after {
 .menu li:first-child {
     border-left: solid 1px rgb(255, 254, 244);
 }
+.menu li:nth-child(2) {
+    background-color: rgb(255, 254, 244);
+}
 .menu li:hover {
     background-color: rgb(255, 254, 244);
 }
@@ -97,13 +100,42 @@ body, body *, body * ::before, body * ::after {
     box-shadow: 0 0 0.5rem rgb(174, 196, 197);
 }
 .article h2 {
+    text-align: justify;
     font-size: 3.6rem;
     font-weight: lighter;
-    margin: 0 2rem;
+    margin: 1rem 2rem;
 }
 .article p {
+    text-align: justify;
     font-size: 1.8rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
+    line-height: 4rem;
+}
+.cite {
+    text-align: center;
+}
+.cite figure {
+    display: inline-block;
+    background-color: #DDDDDD;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.cite img {
+    display: inline-block;
+    height: 15rem;
+}
+.cite figcaption {
+    display: inline-block;
+    vertical-align: text-bottom;
+    font-size: 1.5rem;
+    color: #808080;
+}
+.cite a {
+    text-decoration: none;
+    color: #808080;
+}
+.cite a:hover {
+    text-decoration: underline;
 }
 
 .share {
