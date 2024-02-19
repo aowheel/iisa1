@@ -7,13 +7,9 @@ html, body {
     height: 100%;
 }
 body {
-    font-family:'メイリオ', 'sans-serif';
+    font-family:'Meiryo', 'MS PGothic', sans-serif;
     background-color: rgb(255, 254, 244);
-}
-body, body *, body * ::before, body * ::after {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 /* box1 */
@@ -23,12 +19,12 @@ body, body *, body * ::before, body * ::after {
 }
 .site h1 a {
     text-decoration: none;
-    font-family: 'Darumadrop One', 'sans-serif';
+    font-family: 'Darumadrop One', sans-serif;
     font-size: 4rem;
     color: rgb(255, 254, 244);
 }
 .site h1 {
-    margin-left: 4rem;
+    margin: 0 0 0 4rem;
     padding-bottom: 1rem;
 }
 
@@ -42,8 +38,10 @@ body, body *, body * ::before, body * ::after {
     padding-left: 3rem;
 }
 .menu ul {
-    list-style: none;
     display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .menu li {
     border-right: solid 1px rgb(255, 254, 244);
@@ -52,7 +50,7 @@ body, body *, body * ::before, body * ::after {
 .menu li:first-child {
     border-left: solid 1px rgb(255, 254, 244);
 }
-.menu li:nth-child(2) {
+.menu li:nth-child(1) {
     background-color: rgb(255, 254, 244);
 }
 .menu li:hover {
@@ -85,105 +83,88 @@ body, body *, body * ::before, body * ::after {
 }
 
 /* box3 */
-.box3 {
+.article-list {
     position: relative;
-}
-.time {
-    text-align: end;
-    font-size: 1.2rem;
-    color: rgb(174, 196, 197);
-}
-.article {
-    width: 85rem;
+    display: flex;
+    width: 55%;
     margin: 2rem auto;
-    padding: 4rem;
+    padding: 0 2rem;
     box-shadow: 0 0 0.5rem rgb(174, 196, 197);
 }
-.article h2 {
-    text-align: justify;
-    font-size: 3.6rem;
-    font-weight: lighter;
-    margin: 1rem 2rem;
-}
-.article p {
-    text-align: justify;
-    font-size: 1.8rem;
-    margin: 2rem 0;
-    line-height: 4rem;
-}
-
-.cite {
+.summary-img {
     display: flex;
-    justify-content: center;
-}
-.cite figure {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #DDDDDD;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    vertical-align: middle;
 }
-.cite img {
-    height: 15rem;
-    margin-right: 1rem;
+.summary-img img {
+    height: 12rem;
 }
-.cite figcaption {
-    font-size: 1.5rem;
-    color: #808080;
+.summary {
+    margin-left: 2rem;
 }
-.cite a {
+.summary time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 0.5rem;
+    font-size: 1.2rem;
+    color: rgb(255, 254, 244);
+    background-color: rgb(174, 196, 197);
+}
+.summary a {
     text-decoration: none;
-    color: #808080;
 }
-.cite a:hover {
+.summary h2 {
+    font-size: 1.8rem;
+    color: black;
+    margin: 1.8rem;
+}
+.summary p {
+    font-size: 1.2rem;
+    color: gray;
+}
+.summary:hover {
     text-decoration: underline;
 }
 
-.share {
-    position: absolute;
-    bottom: -3rem;
-    left: 3rem;
-    height: 6rem;
-    width: 6rem;
+.share-box {
     display: flex;
-    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.share {
+    display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 254, 244);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem rgb(0, 86, 92);
 }
 .share:hover {
     box-shadow: 0 0 0.5rem 0.3rem rgb(0, 86, 92);
 }
-.share p {
+.share i {
+    margin: 0.5rem 0 0.5rem 3rem;
+    font-size: 3rem;
+    font-weight: bold;
     color: rgba(0, 128, 137);
 }
-.share p:nth-child(1) i {
-    font-size: 3rem;
-}
-.share p:nth-child(2) {
-    font-size: 1rem;
+.share p {
+    line-height: 1;
+    margin: 0.5rem 3rem 0.5rem 0;
+    font-size: 2rem;
     font-weight: bold;
+    color: rgba(0, 128, 137);
 }
 
 .share-hidden {
     display: none;
-    position: absolute;
-    bottom: -3rem;
-    left: 3rem;
     background-color: rgb(255, 254, 244);
     border-radius: 1rem;
     box-shadow: 0 0 0.5rem 0.3rem rgb(0, 86, 92);
 }
-.center {
-    height: 6rem;
-    width: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.center p {
+    margin: 0.5rem 3rem;
 }
 .center p a {
     text-decoration: none;
@@ -194,18 +175,27 @@ body, body *, body * ::before, body * ::after {
 .share1 p a {
     color: rgb(6, 199, 85);
 }
+.fa-line:hover {
+    color: rgba(6, 199, 86, 0.7);
+}
 .share2 p a {
     color: rgb(0, 0, 0);
 }
+.fa-x-twitter:hover {
+    color: rgb(0, 0, 0, 0.7);
+}
 .share3 p a {
     color: rgb(88, 101, 242);
-    font-size: auto;
+}
+.fa-discord:hover {
+    color: rgb(88, 101, 242, 0.7);
 }
 
 
 /* box4 */
 .box4 p {
     text-align: center;
+    margin: 0;
     padding-top: 0.6rem;
     font-size: 1.2rem;
     color: rgb(174, 196, 197);
@@ -213,33 +203,6 @@ body, body *, body * ::before, body * ::after {
 }
 
 /* fixed */
-/*
-.calender {
-    position: fixed;
-    top: 1.2rem;
-    right: 3rem;
-    height: 5rem;
-    width: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: rgb(255, 254, 244);
-    box-shadow: 0 0 0.5rem rgb(174, 196, 197);
-}
-.calender:hover {
-    background-color: rgb(255, 254, 244);
-    box-shadow: 0 0 0.5rem 0.3rem rgb(174, 196, 197);
-}
-.calender p a {
-    text-decoration: none;
-    color: rgb(0, 86, 92);
-}
-.calender p a i {
-    font-size: 3rem;
-}
-*/
-
 .top {
     position: fixed;
     bottom: 1.2rem;
@@ -267,19 +230,12 @@ body, body *, body * ::before, body * ::after {
 
 /* under 1000px */
 @media (max-width: 1000px) {
-    .article {
-        width: 85%;
+    .article-list {
+        width: 55rem;
     }
 }
 
-/* under 800px */
-@media (max-width: 800px) {
-    .article {
-        width: 68rem;
-    }
-}
-
-/* under 500px */
+/* under 700px */
 @media (max-width: 700px) {
     html {
         font-size: 50%; /* ->8px */
@@ -289,24 +245,20 @@ body, body *, body * ::before, body * ::after {
         padding-left: 1rem;
     }
     .menu li {
-        padding: 0.2rem 0.4rem;
+        padding: 0.6rem 0.2rem;
     }
 
     .access {
         padding-right: 1rem;
     }
     .access p {
-        margin: 0.2rem 0;
-        padding: 0 0.4rem;
+        margin: 0.6rem 0;
+        padding: 0 0.2rem;
     }
 
-    .article {
-        width: calc(100%*68/70);
-        padding: 2rem;
-    }
-
-    .share .share-hidden {
-        left: 2rem;
+    .article-list {
+        width: 65%;
+        margin: 1rem auto;
     }
 
     .top {

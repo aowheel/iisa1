@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+html {
+    font-size: 62.5%; /* ->10px */
+}
+html, body {
+    height: 100%;
+}
+body {
+    font-family:'Meiryo', 'MS PGothic', sans-serif;
+    background-color: rgb(255, 254, 244);
+}
+body, body *, body * ::before, body * ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* box1 */
+.box1 {
+    background-color: rgba(0, 128, 137);
+    border-bottom: solid 0.1rem rgb(255, 254, 244);
+}
+.site h1 a {
+    text-decoration: none;
+    font-family: 'Darumadrop One', sans-serif;
+    font-size: 4rem;
+    color: rgb(255, 254, 244);
+}
+.site h1 {
+    margin-left: 4rem;
+    padding-bottom: 1rem;
+}
+
+/* box2 */
+.box2 {
+    display: flex;
+    background-color: rgb(174, 196, 197);
+}
+
+.menu {
+    padding-left: 3rem;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+.menu li {
+    border-right: solid 1px rgb(255, 254, 244);
+    padding: 0.5rem 1rem;
+}
+.menu li:first-child {
+    border-left: solid 1px rgb(255, 254, 244);
+}
+.menu li:nth-child(2) {
+    background-color: rgb(255, 254, 244);
+}
+.menu li:hover {
+    background-color: rgb(255, 254, 244);
+}
+.menu li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 550;
+    color: rgb(0, 86, 92);
+}
+
+.access {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3rem;
+}
+.access p {
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+    border-radius: 1.2rem;
+    background-color: rgb(0, 86, 92);
+}
+.access a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 550;
+    color: rgb(174, 196, 197);
+}
+
+/* box3 */
+.box3 {
+    position: relative;
+}
+.time {
+    text-align: end;
+    font-size: 1.2rem;
+    color: rgb(174, 196, 197);
+}
+.article {
+    width: 85rem;
+    margin: 2rem auto;
+    padding: 4rem;
+    box-shadow: 0 0 0.5rem rgb(174, 196, 197);
+}
+.article h2 {
+    text-align: justify;
+    font-size: 3.6rem;
+    font-weight: lighter;
+    margin: 1rem 2rem;
+}
+.article p {
+    text-align: justify;
+    font-size: 1.8rem;
+    margin: 2rem 0;
+    line-height: 4rem;
+}
+
+.cite {
+    display: flex;
+    justify-content: center;
+}
+.cite figure {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DDDDDD;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    vertical-align: middle;
+}
+.cite img {
+    height: 15rem;
+    margin-right: 1rem;
+}
+.cite figcaption {
+    font-size: 1.5rem;
+    color: #808080;
+}
+.cite a {
+    text-decoration: none;
+    color: #808080;
+}
+.cite a:hover {
+    text-decoration: underline;
+}
+
+.share {
+    position: absolute;
+    bottom: -3rem;
+    left: 3rem;
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 254, 244);
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem rgb(0, 86, 92);
+}
+.share:hover {
+    box-shadow: 0 0 0.5rem 0.3rem rgb(0, 86, 92);
+}
+.share p {
+    color: rgba(0, 128, 137);
+}
+.share p:nth-child(1) i {
+    font-size: 3rem;
+}
+.share p:nth-child(2) {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.share-hidden {
+    display: none;
+    position: absolute;
+    bottom: -3rem;
+    left: 3rem;
+    background-color: rgb(255, 254, 244);
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem 0.3rem rgb(0, 86, 92);
+}
+.center {
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center p a {
+    text-decoration: none;
+}
+.center p a i {
+    font-size: 3rem;
+}
+.share1 p a {
+    color: rgb(6, 199, 85);
+}
+.share2 p a {
+    color: rgb(0, 0, 0);
+}
+.share3 p a {
+    color: rgb(88, 101, 242);
+    font-size: auto;
+}
+
+
+/* box4 */
+.box4 p {
+    text-align: center;
+    padding-top: 0.6rem;
+    font-size: 1.2rem;
+    color: rgb(174, 196, 197);
+    border-top: dashed 0.1rem rgb(174, 196, 197);
+}
+
+/* fixed */
+/*
+.calender {
+    position: fixed;
+    top: 1.2rem;
+    right: 3rem;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(255, 254, 244);
+    box-shadow: 0 0 0.5rem rgb(174, 196, 197);
+}
+.calender:hover {
+    background-color: rgb(255, 254, 244);
+    box-shadow: 0 0 0.5rem 0.3rem rgb(174, 196, 197);
+}
+.calender p a {
+    text-decoration: none;
+    color: rgb(0, 86, 92);
+}
+.calender p a i {
+    font-size: 3rem;
+}
+*/
+
+.top {
+    position: fixed;
+    bottom: 1.2rem;
+    right: 3rem;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(255, 254, 244);
+    box-shadow: 0 0 0.5rem rgb(174, 196, 197);
+}
+.top:hover {
+    background-color: rgb(255, 254, 244);
+    box-shadow: 0 0 0.5rem 0.3rem rgb(174, 196, 197);
+}
+.top p a {
+    text-decoration: none;
+    color: rgb(0, 86, 92);
+}
+.top p a i {
+    font-size: 3rem;
+}
+
+/* under 1000px */
+@media (max-width: 1000px) {
+    .article {
+        width: 85%;
+    }
+}
+
+/* under 800px */
+@media (max-width: 800px) {
+    .article {
+        width: 68rem;
+    }
+}
+
+/* under 500px */
+@media (max-width: 700px) {
+    html {
+        font-size: 50%; /* ->8px */
+    }
+
+    .menu {
+        padding-left: 1rem;
+    }
+    .menu li {
+        padding: 0.6rem 0.2rem;
+    }
+
+    .access {
+        padding-right: 1rem;
+    }
+    .access p {
+        margin: 0.6rem 0;
+        padding: 0 0.2rem;
+    }
+
+    .article {
+        width: calc(100%*68/70);
+        padding: 2rem;
+    }
+
+    .share .share-hidden {
+        left: 2rem;
+    }
+
+    .top {
+        right: 2rem;
+    }
+}

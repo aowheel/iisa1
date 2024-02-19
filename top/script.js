@@ -14,37 +14,12 @@ $(document).ready(function(){
 
     $('.share').on('click', function(){
         $(this).css('display', 'none');
-        $('.share-hidden').css('display', 'block');
+        $('.share-hidden').css('display', 'flex');
     })
-    $('.article').on('click', function(){
+    $('.box3').on('click', function(){
         $('.share').css('display', 'flex');
         $('.share-hidden').css('display', 'none');
     })
-
-    $('.fa-line').hover(
-        function(){
-            $(this).animate({'fontSize': '3.5rem'}, 100);
-        },
-        function(){
-            $(this).animate({'fontSize': '3rem'}, 100);
-        }
-    )
-    $('.fa-x-twitter').hover(
-        function(){
-            $(this).animate({'fontSize': '3.5rem'}, 100);
-        },
-        function(){
-            $(this).animate({'fontSize': '3rem'}, 100);
-        }
-    )
-    $('.fa-discord').hover(
-        function(){
-            $(this).animate({'fontSize': '3.5rem'}, 100);
-        },
-        function(){
-            $(this).animate({'fontSize': '3rem'}, 100);
-        }
-    )
 
     var shareUrl = window.location.href;
     setSnsShare(shareUrl);
@@ -69,4 +44,3 @@ $(document).ready(function(){
         }); 
     }
 });
-
